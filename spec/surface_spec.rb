@@ -30,4 +30,20 @@ describe Surface do
     end
   end
 
+  describe '#is_next_move_valid?' do
+    context 'when next move is valid' do
+      it { expect(surface.is_next_move_valid?(1,2,:WEST)).to be true }
+      it { expect(surface.is_next_move_valid?(3,2,:EAST)).to be true }
+      it { expect(surface.is_next_move_valid?(2,1,:SOUTH)).to be true }
+      it { expect(surface.is_next_move_valid?(2,3,:NORTH)).to be true }
+      it { expect(surface.is_next_move_valid?(2,4,:EAST)).to be true }
+    end
+    context 'when next move is not valid' do
+      it { expect{surface.is_next_move_valid?(0,2,:WEST)}.to raise_error(StandardError, "Invalid move! Robot can be fall!") }
+      it { expect{surface.is_next_move_valid?(4,2,:EAST)}.to raise_error(StandardError, "Invalid move! Robot can be fall!") }
+      it { expect{surface.is_next_move_valid?(2,0,:SOUTH)}.to raise_error(StandardError, "Invalid move! Robot can be fall!") }
+      it { expect{surface.is_next_move_valid?(2,4,:NORTH)}.to raise_error(StandardError, "Invalid move! Robot can be fall!") }
+    end
+  end
+
 end
