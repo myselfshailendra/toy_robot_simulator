@@ -48,7 +48,8 @@ class Robot
   end
 
   def report
-    return 'POSITION = (' + self.x_position.to_s + ',' + self.y_position.to_s + ') ' + self.facing.to_s
+    puts position = 'POSITION = (' + self.x_position.to_s + ',' + self.y_position.to_s + ') ' + self.facing.to_s
+    return position
   end
 
   private
