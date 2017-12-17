@@ -84,4 +84,19 @@ describe Robot do
     end
   end
 
+  describe '#left' do
+    it '1 time turns robot left from EAST facing' do
+      robot.place(2,3,:EAST)
+      robot.left
+      expect(robot.facing).to eq :NORTH
+    end
+    it '3 time turns robot left from SOUTH facing' do
+      robot.place(1,4,:SOUTH)
+      robot.left
+      robot.left
+      robot.left
+      expect(robot.facing).to eq :WEST
+    end
+  end
+
 end

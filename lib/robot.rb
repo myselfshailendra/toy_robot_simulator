@@ -26,6 +26,10 @@ class Robot
     end
   end
 
+  def left
+    self.facing = DIRECTIONS[(DIRECTIONS.index(self.facing) + 1) % DIRECTIONS.length]
+  end
+
   private
 
   def valid_facing?(facing)
