@@ -30,6 +30,10 @@ class Robot
     self.facing = DIRECTIONS[(DIRECTIONS.index(self.facing) + 1) % DIRECTIONS.length]
   end
 
+  def right
+    self.facing = DIRECTIONS[(DIRECTIONS.index(self.facing) - 1) % DIRECTIONS.length]
+  end
+
   private
 
   def valid_facing?(facing)
