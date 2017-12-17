@@ -8,7 +8,7 @@ class Robot
   end
 
   def place(x_position, y_position, facing)
-    if @surface.valid_position?(x_position, y_position) && valid_facing?(facing)
+    if self.surface.valid_position?(x_position, y_position) && valid_facing?(facing)
       self.x_position = x_position
       self.y_position = y_position
       self.facing = facing
@@ -16,11 +16,13 @@ class Robot
   end
 
   def move
-    case self.facing
-    when :NORTH then self.y_position += 1
-    when :SOUTH then self.y_position -= 1
-    when :EAST then self.x_position += 1
-    when :WEST then self.x_position -= 1
+    if self.surface.is_next_move_valid?(self.x_position, self.y_position, self.facing)
+      case self.facing
+      when :NORTH then self.y_position += 1
+      when :SOUTH then self.y_position -= 1
+      when :EAST then self.x_position += 1
+      when :WEST then self.x_position -= 1
+      end
     end
   end
 
