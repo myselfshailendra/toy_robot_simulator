@@ -39,4 +39,37 @@ describe Robot do
     end
   end
 
+  describe '#move' do
+    it 'place robot from position 2,2,NORTH to 2,3,NORTH' do
+      robot.place(2,2,:NORTH)
+      robot.move
+      expect(robot.x_position).to eq 2
+      expect(robot.y_position).to eq 3
+      expect(robot.facing).to eq :NORTH
+    end
+    it 'place robot from position 2,2,WEST to 0,2,WEST' do
+      robot.place(2,2,:WEST)
+      robot.move
+      robot.move
+      expect(robot.x_position).to eq 0
+      expect(robot.y_position).to eq 2
+      expect(robot.facing).to eq :WEST
+    end
+    it 'place robot from position 2,2,SOUTH to 2,0,SOUTH' do
+      robot.place(2,2,:SOUTH)
+      robot.move
+      robot.move
+      expect(robot.x_position).to eq 2
+      expect(robot.y_position).to eq 0
+      expect(robot.facing).to eq :SOUTH
+    end
+    it 'place robot from position 2,2,EAST to 3,2,EAST' do
+      robot.place(2,2,:EAST)
+      robot.move
+      expect(robot.x_position).to eq 3
+      expect(robot.y_position).to eq 2
+      expect(robot.facing).to eq :EAST
+    end
+  end
+
 end

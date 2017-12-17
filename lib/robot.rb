@@ -15,6 +15,15 @@ class Robot
     end
   end
 
+  def move
+    case self.facing
+    when :NORTH then self.y_position += 1
+    when :SOUTH then self.y_position -= 1
+    when :EAST then self.x_position += 1
+    when :WEST then self.x_position -= 1
+    end
+  end
+
   private
 
   def valid_facing?(facing)
