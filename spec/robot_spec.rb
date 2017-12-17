@@ -14,6 +14,16 @@ describe Robot do
     end
   end
 
+  describe '#execute_command' do
+    it 'executes all robot commands' do
+      robot.execute_command(:PLACE,1,2,:NORTH)
+      robot.execute_command(:LEFT,nil,nil,nil)
+      robot.execute_command(:MOVE,nil,nil,nil)
+      robot.execute_command(:RIGHT,nil,nil,nil)
+      expect(robot.execute_command(:REPORT,nil,nil,nil)).to eq 'POSITION = (0,2) NORTH'
+    end
+  end
+
   describe '#place' do
     context 'when position is not valid' do
       it { expect{robot.place(-1,0,:NORTH)}.to raise_error(StandardError, "Position is not valid!") }

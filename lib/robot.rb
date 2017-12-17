@@ -7,6 +7,16 @@ class Robot
     @surface = Surface.new
   end
 
+  def execute_command(command, x_position, y_position, facing)
+    return self.place(x_position, y_position, facing) if (command == :PLACE)
+    case command.to_sym
+    when :MOVE then self.move
+    when :LEFT then self.left
+    when :RIGHT then self.right
+    when :REPORT then self.report
+    end
+  end
+
   def place(x_position, y_position, facing)
     if self.surface.valid_position?(x_position, y_position) && valid_facing?(facing)
       self.x_position = x_position
