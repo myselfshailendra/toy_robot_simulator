@@ -9,11 +9,13 @@ class Robot
 
   def execute_command(command, x_position, y_position, facing)
     return self.place(x_position, y_position, facing) if (command == :PLACE)
-    case command.to_sym
-    when :MOVE then self.move
-    when :LEFT then self.left
-    when :RIGHT then self.right
-    when :REPORT then self.report
+    if robot_placed?
+      case command.to_sym
+      when :MOVE then self.move
+      when :LEFT then self.left
+      when :RIGHT then self.right
+      when :REPORT then self.report
+      end
     end
   end
 
@@ -49,6 +51,11 @@ class Robot
   end
 
   private
+
+  def robot_placed?
+    return true if (self.x_position != nil || self.y_position != nil || self.facing != nil)
+    raise StandardError, "Please place robot first!"
+  end
 
   def valid_facing?(facing)
     return true if DIRECTIONS.include?(facing)
