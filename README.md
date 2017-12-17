@@ -54,7 +54,7 @@ Below digram is showing the directional situation of table:
 
 #### Some Tested Input and Output Examples based on above 5 units X 5 units diagram:
 
-a).
+#### a).
 
 *Enter your command:*
 
@@ -71,7 +71,7 @@ a).
 *POSITION = (1,4) NORTH*
 
 
-b).
+#### b).
 
 *Enter your command:*
 
@@ -108,7 +108,7 @@ b).
 *POSITION = (3,4) WEST*
 
 
-c).
+#### c).
 
 *Enter your command:*
 
@@ -147,7 +147,7 @@ c).
 *POSITION = (0,0) NORTH*
 
 
-d).
+#### d).
 
 *Enter your command:*
 
