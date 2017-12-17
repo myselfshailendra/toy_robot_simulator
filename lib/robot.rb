@@ -2,6 +2,7 @@ class Robot
 
   attr_accessor :surface, :x_position, :y_position, :facing
   DIRECTIONS = [:NORTH, :WEST, :SOUTH, :EAST]
+  COMMANDS = [:PLACE, :MOVE, :LEFT, :RIGHT, :REPORT]
 
   def initialize
     @surface = Surface.new
