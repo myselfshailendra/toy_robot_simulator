@@ -15,4 +15,19 @@ describe Surface do
     end
   end
 
+  describe '#valid_position?' do
+    context 'when position is valid' do
+      it { expect(surface.valid_position?(1,2)).to be true }
+      it { expect(surface.valid_position?(0,0)).to be true }
+      it { expect(surface.valid_position?(4,2)).to be true }
+      it { expect(surface.valid_position?(3,1)).to be true }
+    end
+    context 'when position is not valid' do
+      it { expect{surface.valid_position?(-1,0)}.to raise_error(StandardError, "Position is not valid!") }
+      it { expect{surface.valid_position?(4,5)}.to raise_error(StandardError, "Position is not valid!") }
+      it { expect{surface.valid_position?(5,5)}.to raise_error(StandardError, "Position is not valid!") }
+      it { expect{surface.valid_position?(0,5)}.to raise_error(StandardError, "Position is not valid!") }
+    end
+  end
+
 end

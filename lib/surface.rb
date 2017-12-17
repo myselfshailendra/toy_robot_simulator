@@ -7,4 +7,9 @@ class Surface
     @y_max_position = y_max_position
   end
 
+  def valid_position?(x_position, y_position)
+    return true if (0...self.x_max_position).to_a.include?(x_position) && (0...self.y_max_position).to_a.include?(y_position)
+    raise StandardError, "Position is not valid!"
+  end
+
 end
