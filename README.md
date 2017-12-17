@@ -20,8 +20,11 @@ Enter your command:
 Now,
 
 1 - First command will be "PLACE X,Y,F" for placing robot on table otherwise it ignores all other commands.
+
 2 - If we run commands in proper syntax without missing spelling, it act accordingly otherwise returns "Invalid Command!" or other appropriate error.
+
 3 - Only "REPORT" command shows robot position, other valid commands just accept input and act accordingly.
+
 4 - This program will exit with "EXIT" command.
 
 Below digram is showing the directional situation of table:
@@ -52,64 +55,119 @@ Below digram is showing the directional situation of table:
 #### Some Tested Input and Output Examples based on above 5 units X 5 units diagram:
 
 a).
+
 Enter your command:
+
 > PLACE 2,3,WEST
+
 > MOVE
+
 > RIGHT
+
 > MOVE
+
 > REPORT
+
 POSITION = (1,4) NORTH
 
 b).
+
 Enter your command:
+
 > PLACE 3,3,EAST
+
 > MOVE
+
 > MOVE
+
 Invalid move! Robot can be fall!
+
 > MOVE
+
 Invalid move! Robot can be fall!
+
 > LEFT
+
 > MOVE
+
 > MOVE
+
 Invalid move! Robot can be fall!
+
 > MOVE
+
 Invalid move! Robot can be fall!
+
 > LEFT
+
 > MOVE
+
 > REPORT
+
 POSITION = (3,4) WEST
 
 c).
+
 Enter your command:
+
 > PLACE 0,0,NORTH
+
 > MOVE
+
 > LEFT
+
 > MOVE
+
 Invalid move! Robot can be fall!
+
 > LEFT
+
 > MOVE
+
 > MOVE
+
 Invalid move! Robot can be fall!
+
 > RIGHT
+
 > MPOVE
+
 Invalid command!
+
 > MOVE
+
 Invalid move! Robot can be fall!
+
 > RIGHT
+
 > REPORT
+
 POSITION = (0,0) NORTH
 
 d).
+
 Enter your command:
+
 > PLACE 0,2,WEST
+
 > MOVE
+
 Invalid move! Robot can be fall!
+
 > PLACE 4,2,EAST
+
 > MOVE
+
 Invalid move! Robot can be fall!
+
 > MOVE
+
 Invalid move! Robot can be fall!
+
 > LEFT
+
 > MOVE
+
 > REPORT
+
 POSITION = (4,3) NORTH
