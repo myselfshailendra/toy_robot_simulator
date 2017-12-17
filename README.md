@@ -56,118 +56,121 @@ Below digram is showing the directional situation of table:
 
 a).
 
-Enter your command:
+*Enter your command:*
 
-> PLACE 2,3,WEST
+*> PLACE 2,3,WEST*
 
-> MOVE
+*> MOVE*
 
-> RIGHT
+*> RIGHT*
 
-> MOVE
+*> MOVE*
 
-> REPORT
+*> REPORT*
 
-POSITION = (1,4) NORTH
+*POSITION = (1,4) NORTH*
+
 
 b).
 
-Enter your command:
+*Enter your command:*
 
-> PLACE 3,3,EAST
+*> PLACE 3,3,EAST*
 
-> MOVE
+*> MOVE*
 
-> MOVE
+*> MOVE*
 
-Invalid move! Robot can be fall!
+*Invalid move! Robot can be fall!*
 
-> MOVE
+*> MOVE*
 
-Invalid move! Robot can be fall!
+*Invalid move! Robot can be fall!*
 
-> LEFT
+*> LEFT*
 
-> MOVE
+*> MOVE*
 
-> MOVE
+*> MOVE*
 
-Invalid move! Robot can be fall!
+*Invalid move! Robot can be fall!*
 
-> MOVE
+*> MOVE*
 
-Invalid move! Robot can be fall!
+*Invalid move! Robot can be fall!*
 
-> LEFT
+*> LEFT*
 
-> MOVE
+*> MOVE*
 
-> REPORT
+*> REPORT*
 
-POSITION = (3,4) WEST
+*POSITION = (3,4) WEST*
+
 
 c).
 
-Enter your command:
+*Enter your command:*
 
-> PLACE 0,0,NORTH
+*> PLACE 0,0,NORTH*
 
-> MOVE
+*> MOVE*
 
-> LEFT
+*> LEFT*
 
-> MOVE
+*> MOVE*
 
-Invalid move! Robot can be fall!
+*Invalid move! Robot can be fall!*
 
-> LEFT
+*> LEFT*
 
-> MOVE
+*> MOVE*
 
-> MOVE
+*> MOVE*
 
-Invalid move! Robot can be fall!
+*Invalid move! Robot can be fall!*
 
-> RIGHT
+*> RIGHT*
 
-> MPOVE
+*> MPOVE*
 
-Invalid command!
+*Invalid command!*
 
-> MOVE
+*> MOVE*
 
-Invalid move! Robot can be fall!
+*Invalid move! Robot can be fall!*
 
-> RIGHT
+*> RIGHT*
 
-> REPORT
+*> REPORT*
 
-POSITION = (0,0) NORTH
+*POSITION = (0,0) NORTH*
+
 
 d).
 
-Enter your command:
+*Enter your command:*
 
-> PLACE 0,2,WEST
+*> PLACE 0,2,WEST*
 
-> MOVE
+*> MOVE*
 
-Invalid move! Robot can be fall!
+*Invalid move! Robot can be fall!*
 
-> PLACE 4,2,EAST
+*> PLACE 4,2,EAST*
 
-> MOVE
+*> MOVE*
 
-Invalid move! Robot can be fall!
+*Invalid move! Robot can be fall!*
 
-> MOVE
+*> MOVE*
 
-Invalid move! Robot can be fall!
+*Invalid move! Robot can be fall!*
 
-> LEFT
+*> LEFT*
 
-> MOVE
+*> MOVE*
 
-> REPORT
+*> REPORT*
 
-POSITION = (4,3) NORTH
+*POSITION = (4,3) NORTH*
