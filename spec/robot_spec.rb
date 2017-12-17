@@ -114,4 +114,11 @@ describe Robot do
     end
   end
 
+  describe '#report' do
+    it 'shows robot position' do
+      robot.place(3,1,:EAST)
+      expect(robot.report).to eq 'POSITION = (3,1) EAST'
+    end
+  end
+
 end

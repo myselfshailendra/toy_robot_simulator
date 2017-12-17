@@ -34,6 +34,10 @@ class Robot
     self.facing = DIRECTIONS[(DIRECTIONS.index(self.facing) - 1) % DIRECTIONS.length]
   end
 
+  def report
+    return 'POSITION = (' + self.x_position.to_s + ',' + self.y_position.to_s + ') ' + self.facing.to_s
+  end
+
   private
 
   def valid_facing?(facing)
